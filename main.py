@@ -23,7 +23,7 @@ import re
 import os
 
 bot = Client("bot",
-             bot_token= "6761706865:AAE2vAsAjBfBkZko2uxhYkOEPUq1ltmfT6c",
+             bot_token= "6714048152:AAGDpIIOfqHAYixHi8I8JeetsFD99d3XOfM",
              api_id=28828575,
              api_hash= "df26b09fa8d1ffa35fbfc1ad41d86bad")
 
@@ -175,7 +175,7 @@ async def account_login(bot: Client, m: Message):
                     try:
                         ka = await helper.download(url, name)
                         copy = await bot.send_document(chat_id=m.chat.id,document=ka, caption=cc1)
-                        await copy.copy(chat_id = --1001993688323)
+                        await copy.copy(chat_id = -1002128215133)
                         count+=1
                         os.remove(ka)
                         time.sleep(1)
@@ -189,7 +189,7 @@ async def account_login(bot: Client, m: Message):
                         download_cmd = f"{cmd} -R 25 --fragment-retries 25"
                         os.system(download_cmd)
                         copy = await bot.send_document(chat_id=m.chat.id,document=f'{name}.pdf', caption=cc1)
-                        await copy.copy(chat_id = --1001993688323)
+                        await copy.copy(chat_id = -1002128215133)
                         count += 1
                         os.remove(f'{name}.pdf')
                     except FloodWait as e:
