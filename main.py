@@ -23,14 +23,14 @@ import re
 import os
 
 bot = Client("bot",
-             bot_token= "6714048152:AAGDpIIOfqHAYixHi8I8JeetsFD99d3XOfM",
-             api_id=28828575,
-             api_hash= "df26b09fa8d1ffa35fbfc1ad41d86bad")
+             bot_token= "7076140541:AAE05p91LrYabpvPF-QlEZPHo6EQkHCXGjg",
+             api_id=24265798,
+             api_hash= "439c569744c141c6b6d727c778de60a6)
 
 
 @bot.on_message(filters.command(["start"]) & filters.user(ADMINS))
 async def account_login(bot: Client, m: Message):
-    editable = await m.reply_text(f"HELLO VR BOT [{m.from_user.first_name}](tg://user?id={m.from_user.id})\nPress /RUN")
+    editable = await m.reply_text(f"HELLO VR BOT [{m.from_user.first_name}](tg://user?id={m.from_user.id})\nPress /live")
 
 
 @bot.on_message(filters.command("stop") & filters.user(ADMINS))
@@ -39,7 +39,7 @@ async def restart_handler(_, m):
     os.execl(sys.executable, sys.executable, *sys.argv)
 
 
-@bot.on_message(filters.command(["RUN"]) & filters.user(ADMINS))
+@bot.on_message(filters.command(["live"]) & filters.user(ADMINS))
 async def account_login(bot: Client, m: Message):
     editable = await m.reply_text(f"**Hey [{m.from_user.first_name}](tg://user?id={m.from_user.id})\nSend txt file**")
     input: Message = await bot.listen(editable.chat.id)
